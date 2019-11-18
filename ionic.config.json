@@ -1,0 +1,7 @@
+{
+  "name": "ngionic-sample-project",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
