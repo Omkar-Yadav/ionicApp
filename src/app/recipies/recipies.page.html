@@ -1,15 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>recipies</ion-title>
+    <ion-title></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  Recipies page works
+  <ng-template ></ng-template>
 
-  <ion-list>
-    <app-recipe-item *ngFor="let recipe of recipes" 
-    [recipeitem]= 'recipe'
-    ></app-recipe-item>
-  </ion-list>
+  
+  <ion-grid>
+    <ion-list>
+      <ion-slides [options]="slideOptsOne">
+        <ion-slide style=" height: 300px;" *ngFor="let recipe of recipes">
+          <ion-img [src]="recipe.image" (click)="openDetailsPage(recipe.id)"> </ion-img>
+        </ion-slide>
+      </ion-slides>
+    </ion-list>
+  </ion-grid>
 </ion-content>
