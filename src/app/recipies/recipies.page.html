@@ -5,16 +5,28 @@
 </ion-header>
 
 <ion-content>
-  <ng-template ></ng-template>
 
-  
+ 
   <ion-grid>
     <ion-list>
+      <app-stats></app-stats>
       <ion-slides [options]="slideOptsOne">
-        <ion-slide style=" height: 300px;" *ngFor="let recipe of recipes">
-          <ion-img [src]="recipe.image" (click)="openDetailsPage(recipe.id)"> </ion-img>
+        <ion-slide  *ngFor="let recipe of recipes">
+          <ion-img [src]="recipe.image" (click)="openDetailsPage(recipe.id)" class="imgclass"> </ion-img>
         </ion-slide>
       </ion-slides>
     </ion-list>
   </ion-grid>
+  <ion-row>
+    <div class="wrapper">
+    <ion-col col-4 *ngFor="let recipe of recipes">
+      <ion-card >
+        <ion-img [src]="recipe.image" (click)="openDetailsPage(recipe.id)" class="imgclass"></ion-img>
+      </ion-card>
+    </ion-col>
+  </div>
+
+  </ion-row>
 </ion-content>
+
+

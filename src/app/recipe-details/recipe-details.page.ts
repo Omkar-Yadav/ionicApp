@@ -3,6 +3,7 @@ import { RecipeService } from './../recipies/recipe.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { Devices } from './device.model';
 
 @Component({
   selector: 'app-recipe-details',
@@ -12,6 +13,7 @@ import { AlertController } from '@ionic/angular';
 export class RecipeDetailsPage implements OnInit {
 
   loadedRecipe: Recipes;
+  devices : Devices;
 
   constructor(
     private activatedRoute: ActivatedRoute,
