@@ -16,10 +16,19 @@
   <!-- add to homescreen for ios -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <style>
+    #grad1 {
+      /* height: 200px;
+      background-color: red; For browsers that do not support gradients */
+      background-image: linear-gradient(skyblue, violet); /* Standard syntax (must be last) */
+    }
+    </style>
 </head>
 
 <body>
-  <app-root></app-root>
+  
+<div id="grad1"><app-root></app-root></div>
+  
 </body>
 
 </html>

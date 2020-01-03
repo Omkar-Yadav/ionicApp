@@ -14,6 +14,7 @@ export class RecipeDetailsPage implements OnInit {
 
   loadedRecipe: Recipes;
   devices : Devices;
+  recipes: Recipes[];
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -36,6 +37,8 @@ export class RecipeDetailsPage implements OnInit {
     }
    
      );
+
+     this.recipes = this.recipeService.getAllRecipes();
   }
 
   onDeleteRecipe() {
