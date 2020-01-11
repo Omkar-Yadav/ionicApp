@@ -5,5 +5,53 @@
 </ion-header>
 
 <ion-content>
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime display-format="DD MMM YYYY"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>Time</ion-label>
+    <ion-datetime display-format="hh mm A" [(ngModel)]="mydate" (ngModelChange)="doSomething(this.mydate)">
+    </ion-datetime>
+  </ion-item>
 
+  <button (click)=" onclickfunction()">click me</button>
+  <div class="container my-4">
+
+    <p class="font-weight-bold">In Bootstrap 4 add <code>.rounded-circle</code> class to give the image the shape of a
+      circle.</p>
+
+    <p><strong>Detailed documentation and more examples about Bootstrap image slider you can find in our <a href="https://mdbootstrap.com/docs/jquery/utilities/borders/"
+          target="_blank">Bootstrap Borders Docs</a> and <a href="https://mdbootstrap.com/docs/jquery/content/images/"
+          target="_blank">Bootstrap Images Docs</a></strong></p>
+
+    <!--Grid row-->
+    <div class="row text-center">
+
+      <!--Grid column-->
+      <div class="col-md-6 mb-4" >
+
+        <h2 class="my-5 h2">Basic example</h2>
+
+        <img class="rounded-circle shadow-lg p-3 mb-5" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg"
+          data-holder-rendered="true" >
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-md-6 mb-4">
+
+        <h2 class="my-5 h2">With shadow</h2>
+
+        <img class="rounded-circle z-depth-2" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"
+          data-holder-rendered="true">
+
+      </div>
+      <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+  </div>
 </ion-content>

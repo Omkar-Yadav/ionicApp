@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 
 const routes: Routes = [
-  { path: "", redirectTo: "recipies", pathMatch: "full" },
+  //{ path: "", redirectTo: "recipies", pathMatch: "full" },
   //{path : '', component:  LoginComponent},
   {
     path: "recipies",
@@ -36,7 +36,7 @@ const routes: Routes = [
   },
 
   {
-    path: "rooms",
+    path: "",
     children: [
       {
         path: "",
